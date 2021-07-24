@@ -1,1 +1,182 @@
-<h1>Hello World</h1>
+<html>
+<head>
+	<title>Noita Discord Relay</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+		
+		h1,h2,h3,h4,h5,h6 {
+			font-family: 'Lexend', sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		
+		h1 {
+			font-weight: 400;
+			padding: 2em 0 0 0;
+		}
+		
+		h2 {
+			font-weight: 400;
+			padding: 2.5em 0 0.5em 0;
+		}
+		
+		h3 {
+			font-weight: 400;
+			padding: 0.5em 0;
+		}
+		
+		html, body {
+			font-size: 16px;
+			font-family: 'Open Sans', sans-serif;
+			background: black;
+			color: white;
+		}
+
+		.container {
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+		.container .header {
+			text-align: center;
+		}
+		.container .content {
+		}
+		
+		a {
+			color: orange;
+		}
+
+		ol {
+			list-style: none;
+			counter-reset: my-awesome-counter;
+			padding: 0 0 0 0.5em;
+		}
+		ol li {
+			position: relative;
+			margin-bottom: 2em;
+			padding-left: 3em;
+			padding-top: 0.4em;
+			counter-increment: my-awesome-counter;
+		}
+		ol li::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: inline-block;
+			content: counter(my-awesome-counter);
+			color: orange;
+			border: 2px solid orange;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			border-radius: 2em;
+			margin-right: 1em;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		pre, code {
+			opacity: 0.8;
+		}
+		
+		img {
+			display: block;
+			opacity: 0.4;
+			margin: 1em 0;
+		}
+		
+		img:hover {
+			opacity: 1;
+		}
+		
+		.footer {
+			text-align: center;
+			margin: 5em 0;
+		}
+		
+		.image-with-shadow {
+			display: inline-block;
+			position: relative;
+			border: 2px solid black;
+			margin: 0 auto;
+		}
+		
+		.image-with-shadow::after
+		{
+			box-shadow: inset 0 0 20px 0px #000000;
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			border-radius: 100%;
+		}
+		
+		.image-with-shadow img {
+			opacity: 1;
+			border-radius: 100%;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="image-with-shadow">
+				<img src="profile_picture.png" />
+			</div>
+			<h1>Noita Discord Relay</h1>
+		</div>
+		<div class="content">
+			<h2>Introduction</h2>
+			<p>Thinking all the Noita Twitch integration is pretty cool? Sad that it doesn't work with Discord? Not anymore! NDR emulates a compatible Twitch chat backend server, relaying streaming integration to Discord. Now your "friends" can destroy your run for you!</p>
+		
+			<h2>Setup Instructions</h2>
+			<ol>
+				<li>
+					The NDR bot needs to be invited to your server. Get your server admin to <a href="https://discord.com/oauth2/authorize?client_id=867122283683774464&scope=bot&permissions=0">invite the bot</a> or join a server that already has the bot.
+				</li>
+				<li>
+					Add the following line to the bottom of your hosts file (typically located at <code>C:\Windows\System32\drivers\etc\hosts</code>):
+					<pre>157.245.29.152 irc.chat.twitch.tv</pre>
+					
+					<small>You may have difficulty editing this file without running as an administrator. If you're having trouble or prefer a GUI, try using a tool such as <a href="https://www.abelhadigital.com/hostsman/">HostsMan</a>.</small>
+				</li>
+				<li>
+					Type <code>!noita</code> in the Discord chat you want to play in, this will output a channel name for you to use.
+					<img src="step3.png" />
+				</li>
+				<li>
+					Use the channel name provided to connect via the in-game options.
+					<img src="step4.png" />
+				</li>
+				<li>
+					You're done
+				</li>
+			</ol>
+			
+			<h2>Frequently Asked Questions</h2>
+			<br>
+			<h3>Why does NDR emulate Twitch backend servers?</h3>
+			<p>Noita already has extensive support for streaming integration with Twitch, alongside multiple mods that expand this functionality. None of this extends to any platform other than Twitch. NDR could reimplement all of this functionality from scratch but would it require a game modification, which would not be compatible with any existing mods. Overall, it's much more simple to provide a different route for existing integration.</p>
+			
+			<h3>Does NDR require a game mod or disable achievements?</h3>
+			<p>NDR does not require a game mod, and therefore does not disable achievements or any secrets within the game.</p>
+			
+			<h3>Does NDR work with "Twitch Extended"?</h3>
+			<p>Yes, however some of the more Twitch specific features do not currently work (subscribers, bits, etc)</p>
+			
+			<h2>Support</h2>
+			<p>If you're having troubles, or need support. Drop <code>R4wizard#5960</code> a message on Discord!</p>
+			
+		</div>
+		<div class="footer">
+			<div class="image-with-shadow">
+				<img src="profile_picture.png" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
